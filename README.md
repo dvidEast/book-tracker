@@ -11,3 +11,9 @@ Postgresql Connection
 Other commands
 - `\conninfo` -> gives connection info
 - `psql -U [username] -h localhost [hostname] -d [database]` -> connect to existing 
+
+Docker
+- basic docker setup for frontend, backend, db
+- built on `node:18-alpine` base image
+- run `docker-compose up --build` (docker must be installed)
+- docker will not work unless postgreSQL password is added

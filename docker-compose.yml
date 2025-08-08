@@ -1,0 +1,36 @@
+services:
+  db: 
+    image: postgres:15-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: davidlim
+      POSTGRES_DB: booktracker
+    volumes: 
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  backend:
+    build: ./backend
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://davidlim@db:5432/booktracker
+      PORT: 3000
+    ports:
+      - "3001:3000"
+    networks:
+      - app-network
+
+  frontend:
+    build: ./frontend
+    ports: 
+      - "3000:80"
+    networks:
+      - app-network
+
+volumes:
+  pgdata:
+
+networks:
+  app-network:
