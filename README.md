@@ -1,3 +1,7 @@
+Git Info
+- pushed with .env for info on variables (PORT and URL)
+- when using postgresql, if you don't set a password, it is not required in the db url :)
+
 Postgresql Connection
 - install on brew -> `brew install postgresql@15`
 - start services -> `brew services start postgresql@15`
