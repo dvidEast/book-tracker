@@ -1,3 +1,8 @@
+## Barely a booktracker
+- Purpose: see how PostgreSQL works
+- Outcome: basic full-stack application with minimal components to understand code structure
+- Future improvement: what's not to improve lmao
+
 Git Info
 - pushed with .env for info on variables (PORT and URL)
 - when using postgresql, if you don't set a password, it is not required in the db url :)
